@@ -1,36 +1,101 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Trade Suite
 
-## Getting Started
+Trade Suite is a **versioned playbook, trade journal, and behavioral analytics platform** for discretionary traders.
 
-First, run the development server:
+It helps traders answer one critical question:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+> **Is my strategy failing, or is my execution failing?**
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🎯 Core Features
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 🧠 Versioned Playbook
+- Define trading setups using reusable rules
+- Organize setups into families and variants
+- Track strategy evolution using **setup versions**
+- Define multiple **ranks (A+, A, B+) per version**
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+### 📓 Trade Journaling
+- Record trades with:
+  - primary setup (version + rank)
+  - secondary setups (confluence)
+  - instrument, direction, timestamp
+  - optional session tracking
+- Separate **BACKTEST vs LIVE trades**
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### 📊 Performance Tracking
+- expectedR → planned trade outcome
+- realizedR → actual result
+- fullMoveR → maximum available move
 
-## Deploy on Vercel
+👉 Enables **opportunity capture analysis**
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### 🧠 Behavioral Tracking
+- Track rule adherence
+- Record mistakes and discipline issues
+- Capture emotions (before, during, after)
+
+---
+
+### 🔍 Analytics (Phase 1)
+- Setup performance by:
+  - family
+  - variant
+  - version
+  - rank
+- Backtest vs live comparison
+- Opportunity capture metrics
+- Rule adherence insights
+
+---
+
+## 🧩 Core Concept
+
+Trade Suite separates:
+
+- **Strategy Performance (clean)**
+- **Trader Execution (messy)**
+
+So you can identify:
+- if your system works
+- or if your behavior needs improvement
+
+---
+
+## 🧱 System Architecture (Phase 1)
+
+- Backend: Java + Spring Boot
+- Database: Relational (PostgreSQL planned)
+- Frontend: Next.js (in progress)
+
+---
+
+## 🗂️ Database Schema
+
+![Database Schema](docs/diagrams/database-schema.png)
+
+---
+
+## 🚧 Project Status
+
+Phase 1 (MVP) in development:
+
+- [x] Requirements defined  
+- [x] Database schema designed  
+- [ ] Core domain entities (in progress)  
+- [ ] Trade journaling  
+- [ ] Analytics engine  
+- [ ] UI  
+
+---
+
+## 🧠 One-Line Definition
+
+**Trade Suite is a system that helps traders improve by comparing strategy, execution, and opportunity.**
